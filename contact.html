@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="header-container">
+
+        <div class="logo-area">
+            <h1>StudentHub</h1>
+            <p>Student Portal</p>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+<main class="container">
+
+    <h2 class="page-title">Contact Us</h2>
+
+    <p class="page-intro">
+        Contact the StudentHub support team for assistance,
+        questions, or enquiries.
+    </p>
+
+    <div class="contact-layout">
+
+        <section class="contact-card" aria-labelledby="contact-info-title">
+
+            <h2 id="contact-info-title">
+                Contact Information
+            </h2>
+
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>
+                    <a href="mailto:support@studenthub.example">
+                        support@studenthub.example
+                    </a>
+                </p>
+            </div>
+
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p>
+                    <a href="tel:+911234567890">
+                        +91 12345 67890
+                    </a>
+                </p>
+            </div>
+
+            <div class="contact-item">
+                <h3>Address</h3>
+                <p>
+                    StudentHub Support Centre,
+                    University Campus
+                </p>
+            </div>
+
+        </section>
+
+        <section class="form-card" aria-labelledby="enquiry-title">
+
+            <h2 id="enquiry-title">
+                Send an Enquiry
+            </h2>
+
+            <form action="contact.html" method="get">
+
+                <div class="form-group">
+
+                    <label for="contact-name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contact-name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="contact-email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="contact-email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Enter subject"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Send Message
+                </button>
+
+            </form>
+
+        </section>
+
+    </div>
+
+</main>
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <p>© 2026 StudentHub. All rights reserved.</p>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="contact.html">Contact Us</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

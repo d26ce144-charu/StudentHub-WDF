@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="auth-page">
+
+    <section class="auth-card" aria-labelledby="register-title">
+
+        <div class="auth-brand">
+            <h1 id="register-title">StudentHub</h1>
+            <p>Create Your Student Account</p>
+        </div>
+
+        <form action="login.html" method="get">
+
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="studentid">Student ID</label>
+                <input
+                    type="text"
+                    id="studentid"
+                    name="studentid"
+                    placeholder="Enter your student ID"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="register-email">Email Address</label>
+                <input
+                    type="email"
+                    id="register-email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course</label>
+                <input
+                    type="text"
+                    id="course"
+                    name="course"
+                    placeholder="e.g. Computer Science"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="semester">Semester</label>
+
+                <select id="semester" name="semester" required>
+                    <option value="">Select Semester</option>
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                    <option value="3">Semester 3</option>
+                    <option value="4">Semester 4</option>
+                    <option value="5">Semester 5</option>
+                    <option value="6">Semester 6</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="register-password">Password</label>
+                <input
+                    type="password"
+                    id="register-password"
+                    name="password"
+                    placeholder="Create a password"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input
+                    type="password"
+                    id="confirm-password"
+                    name="confirm-password"
+                    placeholder="Confirm your password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="submit-button">
+                Create Account
+            </button>
+
+        </form>
+
+        <div class="auth-footer">
+            <p>
+                Already have an account?
+                <a href="login.html">Back to Login</a>
+            </p>
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub | Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="header-container">
+
+        <div class="logo-area">
+            <h1>StudentHub</h1>
+            <p>Student Portal</p>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+<main class="container">
+
+    <section class="form-card" aria-labelledby="feedback-title">
+
+        <h2 class="page-title" id="feedback-title">
+            Student Feedback
+        </h2>
+
+        <p class="page-intro">
+            Your feedback helps us improve the StudentHub portal.
+        </p>
+
+        <form action="feedback.html" method="get">
+
+            <div class="form-group">
+
+                <label for="feedback-name">
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="feedback-name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+            <fieldset class="rating-group">
+
+                <legend>Rating</legend>
+
+                <div class="rating-option">
+                    <input
+                        type="radio"
+                        id="rating1"
+                        name="rating"
+                        value="1"
+                        required
+                    >
+                    <label for="rating1">1 - Poor</label>
+                </div>
+
+                <div class="rating-option">
+                    <input
+                        type="radio"
+                        id="rating2"
+                        name="rating"
+                        value="2"
+                    >
+                    <label for="rating2">2 - Fair</label>
+                </div>
+
+                <div class="rating-option">
+                    <input
+                        type="radio"
+                        id="rating3"
+                        name="rating"
+                        value="3"
+                    >
+                    <label for="rating3">3 - Good</label>
+                </div>
+
+                <div class="rating-option">
+                    <input
+                        type="radio"
+                        id="rating4"
+                        name="rating"
+                        value="4"
+                    >
+                    <label for="rating4">4 - Very Good</label>
+                </div>
+
+                <div class="rating-option">
+                    <input
+                        type="radio"
+                        id="rating5"
+                        name="rating"
+                        value="5"
+                    >
+                    <label for="rating5">5 - Excellent</label>
+                </div>
+
+            </fieldset>
+
+            <div class="form-group">
+
+                <label for="feedback-message">
+                    Your Feedback
+                </label>
+
+                <textarea
+                    id="feedback-message"
+                    name="feedback"
+                    placeholder="Write your feedback here..."
+                    required
+                ></textarea>
+
+            </div>
+
+            <button type="submit" class="submit-button">
+                Submit Feedback
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <p>© 2026 StudentHub. All rights reserved.</p>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="contact.html">Contact Us</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
