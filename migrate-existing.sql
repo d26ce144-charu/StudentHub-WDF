@@ -1,0 +1,18 @@
+USE studenthub;
+
+ALTER TABLE users
+    MODIFY full_name VARCHAR(120) NOT NULL,
+    MODIFY student_id VARCHAR(50) NOT NULL,
+    MODIFY email VARCHAR(190) NOT NULL,
+    MODIFY course VARCHAR(120) NOT NULL,
+    ADD COLUMN mobile VARCHAR(20) NOT NULL DEFAULT '',
+    ADD COLUMN study_year TINYINT UNSIGNED NOT NULL DEFAULT 1,
+    ADD COLUMN gender VARCHAR(30) NOT NULL DEFAULT 'prefer-not-to-say',
+    ADD COLUMN role ENUM('student', 'admin') NOT NULL DEFAULT 'student';
+
+ALTER TABLE events
+    MODIFY title VARCHAR(200) NOT NULL,
+    MODIFY event_time VARCHAR(30) NOT NULL,
+    MODIFY venue VARCHAR(160) NOT NULL,
+    ADD COLUMN category VARCHAR(80) NOT NULL DEFAULT 'General',
+    ADD COLUMN poster_path VARCHAR(255) DEFAULT NULL;

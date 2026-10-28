@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>StudentHub | Contact Us</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css?v=3">
+
 </head>
+
 
 <body>
 
@@ -14,77 +24,166 @@
     <div class="header-container">
 
         <div class="logo-area">
+
             <h1>StudentHub</h1>
+
             <p>Student Portal</p>
+
         </div>
 
-        <nav class="main-nav" aria-label="Main navigation">
+
+        <div class="header-actions">
+            <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false">
+                <span class="menu-icon" aria-hidden="true">☰</span>
+                <span class="visually-hidden">Toggle navigation</span>
+            </button>
+            <button class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+        </div>
+
+        <nav class="main-nav" id="site-navigation" aria-label="Main navigation">
+
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="event.html">Events</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html">Logout</a></li>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="profile.php">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="event.html">
+                        Events
+                    </a>
+                </li>
+
+                <li>
+                    <a href="feedback.html">
+                        Feedback
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html" aria-current="page">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="php/logout.php">
+                        Logout
+                    </a>
+                </li>
+
             </ul>
+
         </nav>
 
     </div>
 
 </header>
 
+
 <main class="container">
 
-    <h2 class="page-title">Contact Us</h2>
+    <h2 class="page-title">
+        Contact Us
+    </h2>
+
 
     <p class="page-intro">
         Contact the StudentHub support team for assistance,
         questions, or enquiries.
     </p>
 
+
     <div class="contact-layout">
 
-        <section class="contact-card" aria-labelledby="contact-info-title">
+
+        <section
+            class="contact-card"
+            aria-labelledby="contact-info-title"
+        >
 
             <h2 id="contact-info-title">
                 Contact Information
             </h2>
 
+
             <div class="contact-item">
-                <h3>Email</h3>
+
+                <h3>
+                    Email
+                </h3>
+
                 <p>
+
                     <a href="mailto:support@studenthub.example">
                         support@studenthub.example
                     </a>
+
                 </p>
+
             </div>
 
+
             <div class="contact-item">
-                <h3>Phone</h3>
+
+                <h3>
+                    Phone
+                </h3>
+
                 <p>
+
                     <a href="tel:+911234567890">
                         +91 12345 67890
                     </a>
+
                 </p>
+
             </div>
 
+
             <div class="contact-item">
-                <h3>Address</h3>
+
+                <h3>
+                    Address
+                </h3>
+
                 <p>
                     StudentHub Support Centre,
                     University Campus
                 </p>
+
             </div>
 
         </section>
 
-        <section class="form-card" aria-labelledby="enquiry-title">
+
+        <section
+            class="form-card"
+            aria-labelledby="enquiry-title"
+        >
 
             <h2 id="enquiry-title">
                 Send an Enquiry
             </h2>
 
-            <form action="contact.html" method="get">
+
+            <form
+                id="contactForm"
+                action="php/contact.php"
+                method="POST"
+            >
 
                 <div class="form-group">
 
@@ -102,6 +201,7 @@
 
                 </div>
 
+
                 <div class="form-group">
 
                     <label for="contact-email">
@@ -117,6 +217,7 @@
                     >
 
                 </div>
+
 
                 <div class="form-group">
 
@@ -134,6 +235,7 @@
 
                 </div>
 
+
                 <div class="form-group">
 
                     <label for="message">
@@ -149,9 +251,20 @@
 
                 </div>
 
-                <button type="submit" class="submit-button">
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
                     Send Message
                 </button>
+
+
+                <p
+                    id="contactMessage"
+                    class="form-message"
+                    role="alert"
+                ></p>
 
             </form>
 
@@ -161,20 +274,39 @@
 
 </main>
 
+
 <footer class="site-footer">
 
     <div class="footer-container">
 
-        <p>© 2026 StudentHub. All rights reserved.</p>
+        <p>
+            © 2026 StudentHub. All rights reserved.
+        </p>
 
-        <nav class="footer-links" aria-label="Footer navigation">
-            <a href="contact.html">Contact Us</a>
-            <a href="feedback.html">Feedback</a>
+
+        <nav
+            class="footer-links"
+            aria-label="Footer navigation"
+        >
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+            <a href="feedback.html">
+                Feedback
+            </a>
+
         </nav>
 
     </div>
 
 </footer>
 
+
+<script src="js/script.js"></script>
+<script src="js/ui.js"></script>
+
 </body>
+
 </html>

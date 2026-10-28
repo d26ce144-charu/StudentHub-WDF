@@ -1,121 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>StudentHub | Register</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
 
-<main class="auth-page">
+    <main class="auth-page">
 
-    <section class="auth-card" aria-labelledby="register-title">
+        <section class="auth-card" aria-labelledby="register-title">
 
-        <div class="auth-brand">
-            <h1 id="register-title">StudentHub</h1>
-            <p>Create Your Student Account</p>
-        </div>
+            <button class="theme-toggle auth-theme-toggle" type="button" aria-pressed="false">Dark mode</button>
 
-        <form action="login.html" method="get">
+            <div class="auth-brand">
 
-            <div class="form-group">
-                <label for="fullname">Full Name</label>
-                <input
-                    type="text"
-                    id="fullname"
-                    name="fullname"
-                    placeholder="Enter your full name"
-                    required
-                >
+                <h1 id="register-title">
+                    StudentHub
+                </h1>
+
+                <p>
+                    Create Your Student Account
+                </p>
+
             </div>
 
-            <div class="form-group">
-                <label for="studentid">Student ID</label>
-                <input
-                    type="text"
-                    id="studentid"
-                    name="studentid"
-                    placeholder="Enter your student ID"
-                    required
-                >
+
+            <form id="registerForm" action="php/register.php" method="POST" novalidate>
+
+                <div class="form-group">
+
+                    <label for="fullname">
+                        Full Name
+                    </label>
+
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name"
+                        autocomplete="name" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="studentid">
+                        Student ID
+                    </label>
+
+                    <input type="text" id="studentid" name="studentid" placeholder="Enter your student ID" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="register-email">
+                        Email Address
+                    </label>
+
+                    <input type="email" id="register-email" name="email" placeholder="Enter your email"
+                        autocomplete="email" required>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number"
+                        autocomplete="tel" inputmode="numeric" maxlength="10" required>
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="course">
+                        Course
+                    </label>
+
+                    <input type="text" id="course" name="course" placeholder="e.g. Computer Science" required>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="year">Year of Study</label>
+                    <select id="year" name="year" required>
+                        <option value="">Select Year</option>
+                        <option value="1">First Year</option>
+                        <option value="2">Second Year</option>
+                        <option value="3">Third Year</option>
+                        <option value="4">Fourth Year</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+
+                    <label for="semester">
+                        Semester
+                    </label>
+
+                    <select id="semester" name="semester" required>
+
+                        <option value="">
+                            Select Semester
+                        </option>
+
+                        <option value="1">
+                            Semester 1
+                        </option>
+
+                        <option value="2">
+                            Semester 2
+                        </option>
+
+                        <option value="3">
+                            Semester 3
+                        </option>
+
+                        <option value="4">
+                            Semester 4
+                        </option>
+
+                        <option value="5">
+                            Semester 5
+                        </option>
+
+                        <option value="6">
+                            Semester 6
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="register-password">
+                        Password
+                    </label>
+
+                    <input type="password" id="register-password" name="password" placeholder="At least 8 characters"
+                        autocomplete="new-password" minlength="8" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="confirm-password">
+                        Confirm Password
+                    </label>
+
+                    <input type="password" id="confirm-password" name="confirm-password"
+                        placeholder="Confirm your password" autocomplete="new-password" required>
+
+                </div>
+
+                <fieldset class="choice-group">
+                    <legend>Gender</legend>
+                    <label><input type="radio" name="gender" value="female" required> Female</label>
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="other"> Other</label>
+                    <label><input type="radio" name="gender" value="prefer-not-to-say"> Prefer not to say</label>
+                </fieldset>
+
+                <div class="terms-group">
+                    <label for="terms">
+                        <input type="checkbox" id="terms" name="terms" value="accepted" required>
+                        I accept the terms and conditions.
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Create Account
+                </button>
+
+
+                <p id="registerMessage" class="form-message" role="alert"></p>
+
+            </form>
+
+
+            <div class="auth-footer">
+
+                <p>
+                    Already have an account?
+
+                    <a href="login.html">
+                        Back to Login
+                    </a>
+                </p>
+
             </div>
 
-            <div class="form-group">
-                <label for="register-email">Email Address</label>
-                <input
-                    type="email"
-                    id="register-email"
-                    name="email"
-                    placeholder="Enter your email"
-                    required
-                >
-            </div>
+        </section>
 
-            <div class="form-group">
-                <label for="course">Course</label>
-                <input
-                    type="text"
-                    id="course"
-                    name="course"
-                    placeholder="e.g. Computer Science"
-                    required
-                >
-            </div>
+    </main>
 
-            <div class="form-group">
-                <label for="semester">Semester</label>
 
-                <select id="semester" name="semester" required>
-                    <option value="">Select Semester</option>
-                    <option value="1">Semester 1</option>
-                    <option value="2">Semester 2</option>
-                    <option value="3">Semester 3</option>
-                    <option value="4">Semester 4</option>
-                    <option value="5">Semester 5</option>
-                    <option value="6">Semester 6</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="register-password">Password</label>
-                <input
-                    type="password"
-                    id="register-password"
-                    name="password"
-                    placeholder="Create a password"
-                    required
-                >
-            </div>
-
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password</label>
-                <input
-                    type="password"
-                    id="confirm-password"
-                    name="confirm-password"
-                    placeholder="Confirm your password"
-                    required
-                >
-            </div>
-
-            <button type="submit" class="submit-button">
-                Create Account
-            </button>
-
-        </form>
-
-        <div class="auth-footer">
-            <p>
-                Already have an account?
-                <a href="login.html">Back to Login</a>
-            </p>
-        </div>
-
-    </section>
-
-</main>
+    <script src="js/script.js"></script>
+    <script src="js/ui.js"></script>
 
 </body>
+
 </html>

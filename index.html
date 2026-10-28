@@ -1,122 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudentHub | Home</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="StudentHub - Your student portal for profiles, campus events, and feedback.">
+    <title>StudentHub | Student Portal</title>
+
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
 
-<header class="site-header">
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-container">
 
-    <div class="header-container">
+            <div class="logo-area">
+                <h1>StudentHub</h1>
+                <p>Student Portal</p>
+            </div>
 
-        <div class="logo-area">
-            <h1>StudentHub</h1>
-            <p>Student Portal</p>
-        </div>
+            <div class="header-actions">
+                <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false">
+                    <span class="menu-icon" aria-hidden="true">☰</span>
+                    <span class="visually-hidden">Toggle navigation</span>
+                </button>
+                <button class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+            </div>
 
-        <nav class="main-nav" aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="event.html">Events</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="login.html">Logout</a></li>
-            </ul>
-        </nav>
-
-    </div>
-
-</header>
-
-<main class="container">
-
-    <section class="hero" aria-labelledby="welcome-title">
-
-        <h2 id="welcome-title">Welcome to StudentHub</h2>
-
-        <p>
-            Your centralized student portal for managing your profile,
-            discovering upcoming events, sharing feedback, and accessing
-            student services.
-        </p>
-
-        <a href="profile.html" class="primary-button">
-            View My Profile
-        </a>
-
-    </section>
-
-    <section aria-labelledby="quick-access-title">
-
-        <h2 class="page-title" id="quick-access-title">
-            Quick Access
-        </h2>
-
-        <div class="card-grid">
-
-            <article class="card">
-                <h3>My Profile</h3>
-
-                <p>
-                    View and update your student information.
-                </p>
-
-                <a href="profile.html" class="card-link">
-                    Open Profile
-                </a>
-            </article>
-
-            <article class="card">
-                <h3>Events</h3>
-
-                <p>
-                    Explore upcoming student events and activities.
-                </p>
-
-                <a href="event.html" class="card-link">
-                    View Events
-                </a>
-            </article>
-
-            <article class="card">
-                <h3>Feedback</h3>
-
-                <p>
-                    Share your experience and suggestions.
-                </p>
-
-                <a href="feedback.html" class="card-link">
-                    Give Feedback
-                </a>
-            </article>
+            <nav class="main-nav" id="site-navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="profile.php">Dashboard</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="php/logout.php">Logout</a></li>
+                </ul>
+            </nav>
 
         </div>
+    </header>
 
-    </section>
+    <!-- MAIN CONTENT -->
+    <main class="container">
 
-</main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-label">WELCOME TO YOUR CAMPUS</span>
 
-<footer class="site-footer">
+                <h2>Your Campus. Your Community.</h2>
 
-    <div class="footer-container">
+                <p>
+                    Welcome to StudentHub, your one-stop destination for
+                    managing your student profile, discovering campus
+                    events, sharing feedback, and staying connected
+                    with your college community.
+                </p>
 
-        <p>
-            © 2026 StudentHub. All rights reserved.
-        </p>
+                <div class="hero-actions">
+                    <a href="event.html" class="primary-button">Explore Events &rarr;</a>
+                    <a href="register.html" class="secondary-button">Create Account</a>
+                </div>
+            </div>
+        </section>
 
-        <nav class="footer-links" aria-label="Footer navigation">
-            <a href="contact.html">Contact Us</a>
-            <a href="feedback.html">Feedback</a>
-        </nav>
+        <aside class="notice-banner" id="noticeBanner" role="status">
+            <p><strong>Campus update:</strong> Registration for the upcoming student events is now open.</p>
+            <button class="notice-dismiss" type="button" aria-label="Dismiss notification">&times;</button>
+        </aside>
 
-    </div>
+        <section class="highlights-section" aria-labelledby="highlights-title">
+            <div class="section-heading">
+                <div>
+                    <h2 class="page-title" id="highlights-title">Campus Highlights</h2>
+                    <p class="page-intro">A quick look at what's happening in our community.</p>
+                </div>
+                <div class="slider-controls">
+                    <button type="button" class="slider-button" data-slide="previous" aria-label="Previous highlight">‹</button>
+                    <button type="button" class="slider-button" data-slide="next" aria-label="Next highlight">›</button>
+                </div>
+            </div>
+            <div class="highlight-slider" aria-live="polite">
+                <article class="highlight-slide is-active">
+                    <span class="hero-label">LEARN</span>
+                    <h3>Build skills beyond the classroom</h3>
+                    <p>Join practical workshops led by students and faculty throughout the semester.</p>
+                    <a href="event.html" class="card-link">Browse workshops &rarr;</a>
+                </article>
+                <article class="highlight-slide">
+                    <span class="hero-label">CONNECT</span>
+                    <h3>Find your campus community</h3>
+                    <p>Meet classmates, discover student activities, and make the most of campus life.</p>
+                    <a href="about.html" class="card-link">About StudentHub &rarr;</a>
+                </article>
+                <article class="highlight-slide">
+                    <span class="hero-label">GET INVOLVED</span>
+                    <h3>Your ideas help shape the experience</h3>
+                    <p>Share feedback and help us make StudentHub more useful for every student.</p>
+                    <a href="feedback.html" class="card-link">Share feedback &rarr;</a>
+                </article>
+            </div>
+        </section>
 
-</footer>
+        <!-- FEATURES SECTION -->
+        <section class="features-section">
+            <h2 class="page-title">Everything You Need</h2>
 
+            <p class="page-intro">
+                Make the most of your college experience with StudentHub.
+            </p>
+
+            <div class="card-grid">
+
+                <!-- PROFILE CARD -->
+                <article class="card">
+                    <div class="feature-icon" aria-hidden="true">
+                        👤
+                    </div>
+
+                    <h3>Your Profile</h3>
+
+                    <p>
+                        View your student information and keep your
+                        personal details organized in one place.
+                    </p>
+
+                    <a href="profile.php" class="card-link">
+                        View Profile &rarr;
+                    </a>
+                </article>
+
+                <!-- EVENTS CARD -->
+                <article class="card">
+                    <div class="feature-icon" aria-hidden="true">
+                        🎓
+                    </div>
+
+                    <h3>Campus Events</h3>
+
+                    <p>
+                        Discover college activities, upcoming events,
+                        and opportunities to get involved on campus.
+                    </p>
+
+                    <a href="event.html" class="card-link">
+                        Discover Events &rarr;
+                    </a>
+                </article>
+
+                <!-- FEEDBACK CARD -->
+                <article class="card">
+                    <div class="feature-icon" aria-hidden="true">
+                        💬
+                    </div>
+
+                    <h3>Share Feedback</h3>
+
+                    <p>
+                        Share your ideas and suggestions to help make
+                        your student experience even better.
+                    </p>
+
+                    <a href="feedback.html" class="card-link">
+                        Give Feedback &rarr;
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- QUICK ACCESS SECTION -->
+        <section class="quick-access">
+            <div class="quick-access-content">
+                <div>
+                    <h2>Stay Connected</h2>
+
+                    <p>
+                        Have a question or need assistance?
+                        We're here to help you.
+                    </p>
+                </div>
+
+                <a href="contact.html" class="primary-button">
+                    Contact Us &rarr;
+                </a>
+            </div>
+        </section>
+
+        <section class="faq-section" aria-labelledby="faq-title">
+            <h2 class="page-title" id="faq-title">Frequently Asked Questions</h2>
+            <details class="faq-item">
+                <summary>How do I update my student information?</summary>
+                <p>Open your Dashboard from the navigation and use the Update Profile form.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Where can I find upcoming campus activities?</summary>
+                <p>Visit the Events page to search, filter, sort, and browse upcoming activities.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How can I contact StudentHub support?</summary>
+                <p>Use the Contact Us page to send an enquiry to the support team.</p>
+            </details>
+        </section>
+
+        <dialog class="welcome-modal" id="welcomeModal" aria-labelledby="modal-title">
+            <button class="modal-close" type="button" aria-label="Close welcome message">&times;</button>
+            <span class="hero-label">STUDENTHUB</span>
+            <h2 id="modal-title">Welcome to your campus community</h2>
+            <p>Discover events, keep your student profile up to date, and stay connected.</p>
+            <a class="primary-button" href="event.html">Explore events</a>
+        </dialog>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div>
+                <h3>StudentHub</h3>
+                <p>Your campus, all in one place.</p>
+            </div>
+
+            <nav class="footer-links" aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="event.html">Events</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <p>
+                &copy; 2026 StudentHub. All rights reserved.
+            </p>
+
+        </div>
+    </footer>
+
+    <script src="js/ui.js"></script>
 </body>
+
 </html>

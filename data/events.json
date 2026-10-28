@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Student Orientation Program",
+    "description": "Welcome program for students with information about academic and campus activities.",
+    "date": "2026-11-05",
+    "time": "10:00 AM",
+    "venue": "Main Auditorium",
+    "category": "Campus"
+  },
+  {
+    "title": "Web Development Workshop",
+    "description": "A hands-on workshop covering responsive layouts, CSS Grid, Flexbox, and JavaScript.",
+    "date": "2026-11-12",
+    "time": "11:00 AM",
+    "venue": "Computer Laboratory",
+    "category": "Workshop"
+  },
+  {
+    "title": "Student Technology Seminar",
+    "description": "Explore emerging technologies, student projects, and career opportunities.",
+    "date": "2026-11-19",
+    "time": "2:00 PM",
+    "venue": "Seminar Hall",
+    "category": "Seminar"
+  },
+  {
+    "title": "Campus Cultural Evening",
+    "description": "An evening of student performances, music, and cultural activities.",
+    "date": "2026-11-26",
+    "time": "5:30 PM",
+    "venue": "Open-Air Theatre",
+    "category": "Campus"
+  },
+  {
+    "title": "Introduction to UI Design",
+    "description": "Learn the principles of accessible, mobile-first interface design.",
+    "date": "2026-12-03",
+    "time": "1:00 PM",
+    "venue": "Design Studio",
+    "category": "Workshop"
+  },
+  {
+    "title": "Student Project Showcase",
+    "description": "Meet student teams and see projects created across the academic year.",
+    "date": "2026-12-10",
+    "time": "10:30 AM",
+    "venue": "Innovation Centre",
+    "category": "Showcase"
+  },
+  {
+    "title": "Career Readiness Seminar",
+    "description": "Practical guidance on resumes, interviews, and preparing for internships.",
+    "date": "2026-12-17",
+    "time": "2:30 PM",
+    "venue": "Seminar Hall",
+    "category": "Seminar"
+  }
+]
